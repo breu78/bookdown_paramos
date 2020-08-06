@@ -5,8 +5,8 @@ bookdown::gitbook:
       before: |
         <li><a href="./">Ecología de la vegetación de los páramos de Colombia usando R</a></li>
       after: |
-        <li><a href="https://github.com/SergioBS-pasoeco/paramos_bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/SergioBS-pasoeco/paramos_bookdown/edit/master/%s
+        <li><a href="https://github.com/SergioBS-pasoeco/bookdown_paramos" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/SergioBS-pasoeco/bookdown_paramos/edit/master/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:

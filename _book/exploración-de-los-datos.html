@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Exploración de los datos | Ecología de la vegetación de los páramos de Colombia usando R</title>
+  <meta name="description" content="Este es un libro enfocado en el análisis ecológico de la vegetación utilizando información sobre las especies de plantas presentes en los páramos de Colombia" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Exploración de los datos | Ecología de la vegetación de los páramos de Colombia usando R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es un libro enfocado en el análisis ecológico de la vegetación utilizando información sobre las especies de plantas presentes en los páramos de Colombia" />
+  <meta name="github-repo" content="SergioBS-pasoeco/paramos_bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Exploración de los datos | Ecología de la vegetación de los páramos de Colombia usando R" />
+  
+  <meta name="twitter:description" content="Este es un libro enfocado en el análisis ecológico de la vegetación utilizando información sobre las especies de plantas presentes en los páramos de Colombia" />
+  
+
+<meta name="author" content="Björn Reu, Zarith Villamizar &amp; Sergio Bolívar" />
+
+
+<meta name="date" content="2020-08-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="los-datos.html"/>
+<link rel="next" href="biodiversidad.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Ecología de la vegetación de los páramos de Colombia usando R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i>Introducción</a></li>
+<li class="chapter" data-level="1" data-path="los-datos.html"><a href="los-datos.html"><i class="fa fa-check"></i><b>1</b> Los datos</a><ul>
+<li class="chapter" data-level="1.1" data-path="los-datos.html"><a href="los-datos.html#ocurrencias-de-especies-desde-gbif"><i class="fa fa-check"></i><b>1.1</b> Ocurrencias de especies desde GBIF</a></li>
+<li class="chapter" data-level="1.2" data-path="los-datos.html"><a href="los-datos.html#correción-de-los-sinónimos-utilizando-tnrs"><i class="fa fa-check"></i><b>1.2</b> Correción de los sinónimos utilizando TNRS</a></li>
+<li class="chapter" data-level="1.3" data-path="los-datos.html"><a href="los-datos.html#mapeo-de-los-páramos-de-colombia"><i class="fa fa-check"></i><b>1.3</b> Mapeo de los páramos de Colombia</a></li>
+<li class="chapter" data-level="1.4" data-path="los-datos.html"><a href="los-datos.html#datos-ambientales-de-worldclim-y-otras-fuentes"><i class="fa fa-check"></i><b>1.4</b> Datos ambientales de WorldClim y otras fuentes</a></li>
+<li class="chapter" data-level="1.5" data-path="los-datos.html"><a href="los-datos.html#extracción-de-características-ambientales-utilizando-el-paquete-raster"><i class="fa fa-check"></i><b>1.5</b> Extracción de características ambientales utilizando el paquete “raster”</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html"><i class="fa fa-check"></i><b>2</b> Exploración de los datos</a><ul>
+<li class="chapter" data-level="2.1" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html#explorando-los-datos-de-las-especies"><i class="fa fa-check"></i><b>2.1</b> Explorando los datos de las especies</a></li>
+<li class="chapter" data-level="2.2" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html#depuración-de-los-sitios-con-pocas-observaciones-especies"><i class="fa fa-check"></i><b>2.2</b> Depuración de los sitios con pocas observaciones especies</a></li>
+<li class="chapter" data-level="2.3" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html#especies-únicas"><i class="fa fa-check"></i><b>2.3</b> Especies únicas</a></li>
+<li class="chapter" data-level="2.4" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html#explorando-datos-medioambientales"><i class="fa fa-check"></i><b>2.4</b> Explorando datos medioambientales</a></li>
+<li class="chapter" data-level="2.5" data-path="exploración-de-los-datos.html"><a href="exploración-de-los-datos.html#gradientes-medioambientales-con-pca"><i class="fa fa-check"></i><b>2.5</b> Gradientes medioambientales con PCA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="biodiversidad.html"><a href="biodiversidad.html"><i class="fa fa-check"></i><b>3</b> Biodiversidad</a><ul>
+<li class="chapter" data-level="3.1" data-path="biodiversidad.html"><a href="biodiversidad.html#riqueza-de-especies-vs.intensidad-de-muestreo"><i class="fa fa-check"></i><b>3.1</b> Riqueza de especies vs. intensidad de muestreo</a></li>
+<li class="chapter" data-level="3.2" data-path="biodiversidad.html"><a href="biodiversidad.html#probando-hipótesis-de-biodiversidad"><i class="fa fa-check"></i><b>3.2</b> Probando hipótesis de biodiversidad</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="composición-florística.html"><a href="composición-florística.html"><i class="fa fa-check"></i><b>4</b> Composición florística</a><ul>
+<li class="chapter" data-level="4.1" data-path="composición-florística.html"><a href="composición-florística.html#agrupamientos-basados-en-la-composición-de-especies"><i class="fa fa-check"></i><b>4.1</b> Agrupamientos basados en la composición de especies</a></li>
+<li class="chapter" data-level="4.2" data-path="composición-florística.html"><a href="composición-florística.html#gradientes-florísticos"><i class="fa fa-check"></i><b>4.2</b> Gradientes florísticos</a></li>
+<li class="chapter" data-level="4.3" data-path="composición-florística.html"><a href="composición-florística.html#determinantes-de-la-diversidad-florística"><i class="fa fa-check"></i><b>4.3</b> Determinantes de la diversidad florística</a></li>
+<li class="chapter" data-level="4.4" data-path="composición-florística.html"><a href="composición-florística.html#identificando-especies-indicadoras"><i class="fa fa-check"></i><b>4.4</b> Identificando especies indicadoras</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/SergioBS-pasoeco/paramos_bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Ecología de la vegetación de los páramos de Colombia usando R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploración-de-los-datos" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Exploración de los datos</h1>
+<div id="explorando-los-datos-de-las-especies" class="section level2">
+<h2><span class="header-section-number">2.1</span> Explorando los datos de las especies</h2>
+<blockquote>
+<p><code>“Aquí aprendes limpiar y filtrar los ocurrencias de las especies y calcular índices simples para entenderlos mejor”</code></p>
+</blockquote>
+</div>
+<div id="depuración-de-los-sitios-con-pocas-observaciones-especies" class="section level2">
+<h2><span class="header-section-number">2.2</span> Depuración de los sitios con pocas observaciones especies</h2>
+<blockquote>
+<p><code>“Aquí aprendes a eliminar observaciones no representativos”</code></p>
+</blockquote>
+</div>
+<div id="especies-únicas" class="section level2">
+<h2><span class="header-section-number">2.3</span> Especies únicas</h2>
+<blockquote>
+<p><code>“Aquí aprendes a identificar las especies únicas dentro de tus datos”</code></p>
+</blockquote>
+</div>
+<div id="explorando-datos-medioambientales" class="section level2">
+<h2><span class="header-section-number">2.4</span> Explorando datos medioambientales</h2>
+<blockquote>
+<p><code>“Aquí aprendes a identificar los Páramos más calientes, más húmedos, más secos, más pequeños, ….”</code></p>
+</blockquote>
+</div>
+<div id="gradientes-medioambientales-con-pca" class="section level2">
+<h2><span class="header-section-number">2.5</span> Gradientes medioambientales con PCA</h2>
+<blockquote>
+<p><code>“Aquí aprendes sobre el Análisis de Componentes Principales y a extraer gradientes ambientales”</code></p>
+</blockquote>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="los-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="biodiversidad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/SergioBS-pasoeco/paramos_bookdown/edit/master/03-exploring.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["paramos_bookdown.pdf", "paramos_bookdown.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

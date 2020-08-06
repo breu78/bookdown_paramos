@@ -1,0 +1,21 @@
+# Los datos
+
+## Ocurrencias de especies desde GBIF
+>`“Aquí aprenderás a descargar ocurrencias de especies de Páramo con RGbif”`
+>
+>¿Debes descargar una gran cantidad de datos de ocurrencias de especies y quieres hacerlo de una manera eficiente?
+
+## Correción de los sinónimos utilizando TNRS
+>`“Aquí aprenderás a eliminar sinónimos utilizando Taxize”`
+>
+>...En ocasiones los nombres de nuestras especies son sinónimos que aún no han sido actualizados o simplemente están mal escrotos ¿Qué podemos hacer?
+
+## Mapeo de los páramos de Colombia
+>`“Aquí aprenderás a realizar un mapa de los Páramos en R utilizando Raster”`
+
+## Datos ambientales de WorldClim y otras fuentes
+>`“Aquí aprenderás a descargar datos climáticos de WorldClim”`
+
+## Extracción de características ambientales utilizando el paquete "raster"
+>`“Aquí aprenderás a extraer información espacial de los páramos y combinarla datos de diferentes fuentes”`
+

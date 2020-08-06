@@ -1,0 +1,8 @@
+`r if (knitr:::is_html_output()) '
+# Referencias {-}
+-http://181.225.72.78/Portal-SIAC-web/faces/Dashboard/Biodiversidad2/eco_import_ambiental/eco_import_ambiental.xhtml
+
+-GBIF.org (year), GBIF Home Page. Available from: https://www.gbif.org [5 August 2020].
+
+-Hsieh, T. C., Ma, K. H., & Chao, A. (2016). iNEXT: an R package for rarefaction and extrapolation of species diversity (H ill numbers). Methods in Ecology and Evolution, 7(12), 1451-1456.
+'`

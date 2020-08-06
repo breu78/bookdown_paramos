@@ -1,0 +1,23 @@
+--- 
+title: "Ecología de la vegetación de los páramos de Colombia usando R"
+author: "Björn Reu, Zarith Villamizar & Sergio Bolívar"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo:  SergioBS-pasoeco/paramos_bookdown 
+description: "Este es un libro enfocado en el análisis ecológico de la vegetación utilizando información sobre las especies de plantas presentes en los páramos de Colombia"
+header-includes:
+  - \AtBeginDocument{\renewcommand{\chaptername}{Capítulo}}
+---
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

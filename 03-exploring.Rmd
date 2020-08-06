@@ -1,0 +1,17 @@
+# Exploración de los datos 
+
+## Explorando los datos de las especies
+>`“Aquí aprendes limpiar y filtrar los ocurrencias de las especies y calcular índices simples para entenderlos mejor”`
+
+## Depuración de los sitios con pocas observaciones especies 
+>`“Aquí aprendes a eliminar observaciones no representativos”`
+
+## Especies únicas
+>`“Aquí aprendes a identificar las especies únicas dentro de tus datos”`
+
+## Explorando datos medioambientales
+>`“Aquí aprendes a identificar los Páramos más calientes, más húmedos, más secos, más pequeños, ….”`
+
+## Gradientes medioambientales con PCA
+>`“Aquí aprendes sobre el Análisis de Componentes Principales y a extraer gradientes ambientales”`
+

@@ -1,0 +1,13 @@
+# Composición florística
+
+## Agrupamientos basados en la composición de especies
+>`“Aquí aprenderás a reconocer sitios similares entre sí, de acuerdo a las especies que contienen”`
+
+## Gradientes florísticos 
+>`“Aquí aprenderás a realizar análisis de ordenamiento, utilizando datos binario (PCoA y NMDS)”`
+
+## Determinantes de la diversidad florística
+>`“Aquí aprenderás cuales variables ambientales son importantes para la composición de las plantas presentes en cada páramos”`
+
+## Identificando especies indicadoras
+>`“Aquí aprenderás a identificar las especies clave para entender el gradiente florístico en los ensamblajes analizados”`

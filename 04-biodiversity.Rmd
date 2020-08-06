@@ -1,0 +1,8 @@
+# Biodiversidad
+
+## Riqueza de especies vs. intensidad de muestreo
+>`“Aquí aprenderás sobre la representatividad de los muestreos y la riqueza verdadera”`
+
+## Probando hipótesis de biodiversidad
+>`“Aquí aprenderás poner a prueba diferentes hipótesis sobre porqué varia la biodiversidad entre lugares”`
+

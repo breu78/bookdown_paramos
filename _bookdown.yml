@@ -18,6 +18,13 @@ language:
   ui:
     edit: Edit
     chapter_name: 'Capítulo '
-    appendix_name: 'Apéndice '
+rmd_files: ["index.Rmd",
+            "01-intro.Rmd",
+           "02-the_data.Rmd",
+           "03-exploring.Rmd",
+           "04-biodiversity.Rmd",
+           "05-composition.Rmd",
+           "06-references.Rmd"]
+
 delete_merged_file: true
 

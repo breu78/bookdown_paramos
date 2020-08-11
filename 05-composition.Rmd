@@ -9,5 +9,7 @@
 ## Determinantes de la diversidad florística
 >`“Aquí aprenderás cuales variables ambientales son importantes para la composición de las plantas presentes en cada páramos”`
 
+db-RDA, envfit
+
 ## Identificando especies indicadoras
 >`“Aquí aprenderás a identificar las especies clave para entender el gradiente florístico en los ensamblajes analizados”`
